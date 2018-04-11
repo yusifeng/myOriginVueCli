@@ -15,9 +15,10 @@ function getRandomInt(min, max) {
 
 export function debounce(func, delay) {
 	let timer
-	return function(...args) {
+	return function (...args) {
 
 		if (timer) {
+			console.log('haha')
 			clearTimeout(timer)
 		}
 		timer = setTimeout(() => {

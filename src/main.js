@@ -6,6 +6,12 @@ import router from './router'
 import 'common/stylus/index.styl'
 import VueLazyLoad from 'vue-lazyload'
 
+
+/* 使用 vue-awesome-swiper */
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false
 fastclick.attach(document.body)
 Vue.use(VueLazyLoad, {
