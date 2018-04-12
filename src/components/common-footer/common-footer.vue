@@ -82,7 +82,7 @@ export default {
     height 1000px
     background-color $color-footer-background
     color $color-footer-dt-color
-    font-size 12px
+    font-size $font-size-small
     .footer-website
       padding-top 30px
       padding-bottom 20px
@@ -98,17 +98,18 @@ export default {
             width 20%
             box-sizing border-box
             h3
-              font-size 14px
+              font-size $font-size-medium
             ul
               margin-top 15px
               margin-bottom 15px
               li
-                font-size 12px
+                font-size $font-size-small
                 line-height 1.8
                 a
                   color $color-footer-dd-color
                   &:hover
                     color $color-footer-hover-color
+                    color #91c31ed
     // .special
     //   border-right 1px solid $color-footer-line-color
     .footer-copyright
@@ -117,7 +118,7 @@ export default {
       padding-top 30px
       text-align left
       line-height 1.8
-      font-size 14px
+      font-size $font-size-medium
       border-top 1px solid $color-footer-line-color
       color $color-footer-dd-color
 

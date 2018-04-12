@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper">
   <div class="echart" ref="echarts1" ></div>
-  <div class="echart" ref="echarts2" ></div>
+  <!-- <div class="echart" ref="echarts2" ></div> -->
   <div class="echart" ref="echarts3" ></div>
 </div>
 </template>
@@ -18,18 +18,56 @@ export default {
         title: {
           show: true,
           text: '销售额增长',
-          textStyle: {
-          }
+          // backgroundColor: 'red'
         },
         xAxis: {
+          gridIndex: 0,
           type: 'category',
           data: [2013, 2014, 2015, 2016, 2017, 2018],
           name: '(年)',
-          nameGap: 10
+          nameGap: 10,
+          // nameRotate: '90',
+          // inverse: true,
+          // boundaryGap: ['50%', '20%'],
+          // silent: true,
+          axisLine: {
+            // show: false,
+            // symbol: 'arrow',
+            // symbolSize: [20, 20],
+            lineStyle: {
+              color: '#4fc08d',
+              width: 3
+            }
+          },
+          axisTick: {
+            // show: false,
+            alignWithLabel: true,
+            inside: false,
+            // length: 5,
+            lineStyle: {
+            }
+          },
+          axisLabel: {
+            // show: false,
+            // inside: true
+          },
+          axisPointer: {
+            // show: false,
+            // type: 'shadow',
+            // snap: true
+            label: {
+              // show: true,
+              // fontSize: 16
+            },
+            lineStyle: {
+              color: 'red'
+            }
+          }
         },
         yAxis: {
           type: 'value',
-          name: '元'
+          name: '元',
+          scale: true
         },
         series: [{
           name: '营销总额',
@@ -37,10 +75,24 @@ export default {
           type: 'line'
         }],
         legend: {
+          // type: 'scroll',
+          // show: false,
+          // left: 'center',
+          orient: 'vertical',
           data:[{
             name: '营销总额',
-          }]
+          }],
+          backgroundColor: 'purple'
         },
+        grid: {
+          show: true,
+        },
+        toolbox: {
+          show: true,
+          iconStyle: {
+            color: 'red'
+          }
+        } 
       },
       options2: {
         title: {
@@ -48,6 +100,7 @@ export default {
           x: 'center'
         },
         tooltip : {
+          // show: false,
           trigger: 'item',
           formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
@@ -90,7 +143,11 @@ export default {
           type: 'category',
           data: [2013, 2014, 2015, 2016, 2017, 2018],
           name: '(年)',
-          nameGap: 1
+          nameGap: 1,
+          axisTick: {
+            show: false,
+            alignWithLabel: true
+          }
         },
         yAxis: {
           type: 'value',
@@ -110,6 +167,26 @@ export default {
           }]
         },
       },
+      options4: {
+        radar: {
+          name: {
+            textStyle: {
+              color: '#fff',
+              backgroundColor: '#999',
+              borderRadius: 3,
+              padding: [3, 5]
+            }
+          },
+          indicator: [
+           { name: '销售（sales）', max: 6500, color: 'red'},
+           { name: '管理（Administration）', max: 16000},
+           { name: '信息技术（Information Techology）', max: 30000},
+           { name: '客服（Customer Support）', max: 38000},
+           { name: '研发（Development）', max: 52000},
+           { name: '市场（Marketing）', max: 25000}
+        ]
+        }
+      }
     }
   },
   mounted() {
@@ -118,11 +195,12 @@ export default {
   methods: {
     _initECharts() {
       this.echarts1 = echarts.init(this.$refs.echarts1)
-      this.echarts2 = echarts.init(this.$refs.echarts2)
+      // this.echarts2 = echarts.init(this.$refs.echarts2)
       this.echarts3 = echarts.init(this.$refs.echarts3)
       this.echarts1.setOption(this.options1)
-      this.echarts2.setOption(this.options2)
+      // this.echarts2.setOption(this.options2)
       this.echarts3.setOption(this.options3)
+      Object.defineProperty
     }
   }
 }

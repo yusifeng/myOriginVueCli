@@ -1,11 +1,15 @@
 <template>
   <div id="app" name="app">
+    <common-bar></common-bar>
+
     <!-- 轮播图 -->
     <slide></slide>
+
     <!-- 图标 -->
     <echarts></echarts>
+    
     <!-- 版权相关 -->
-    <wt-footer></wt-footer>
+    <common-footer></common-footer>
 
     <!-- to-top -->
     <to-top></to-top>
@@ -15,8 +19,9 @@
 <script>
   import Slide from 'base/slide/slide'
   import ToTop from 'base/to-top/to-top'
-  import WtFooter from 'components/wt-footer/wt-footer'
+  import CommonFooter from 'components/common-footer/common-footer'
   import Echarts from 'components/echarts/echarts'
+  import CommonBar from 'components/common-bar/common-bar'
   export default {
     data() {
       return {
@@ -24,17 +29,21 @@
         msg: 'david'
       }
     },
+
     methods: {
       
     },
+
     computed: {
 
     },
+
     components: {
       Slide,
-      WtFooter,
+      CommonFooter,
       ToTop,
-      Echarts
+      Echarts,
+      CommonBar
     }
   }
 </script>
