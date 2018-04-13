@@ -79,7 +79,6 @@ export default {
   @import '~common/stylus/variable'
   .footer
     width 100%
-    height 1000px
     background-color $color-footer-background
     color $color-footer-dt-color
     font-size $font-size-small
@@ -108,8 +107,8 @@ export default {
                 a
                   color $color-footer-dd-color
                   &:hover
-                    color $color-footer-hover-color
-                    color #91c31ed
+                    // color $color-footer-theme-color
+                    color $color-common-theme-color
     // .special
     //   border-right 1px solid $color-footer-line-color
     .footer-copyright

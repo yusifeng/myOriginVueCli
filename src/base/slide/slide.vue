@@ -80,6 +80,5 @@
         display inline-block
         color green
         font-size 50px
-  
 </style>
 

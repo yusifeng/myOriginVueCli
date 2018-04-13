@@ -3,7 +3,7 @@
     <div class="bar-top">
       <div class="bar-top-left">沃淘信科</div>
       <div class="bar-top-right">
-        <a href="">控制台</a>
+        <a href="https://www.baidu.com" target="_blank">控制台</a>
         <a href="">文档</a>
         <a href="">备案</a>
         <a href="">邮箱</a>
@@ -12,13 +12,13 @@
     </div>
     <div class="bar-nav">
       <ul class="bar-nav-left">
-        <li><a href="">沃淘概况</a></li>
-        <li><a href="">产品与服</a></li>
-        <li><a href="">业绩成果</a></li>
-        <li><a href="">公司资源</a></li>
-        <li><a href="">产品优势</a></li>
-        <li><a href="">样板客户</a></li>
-        <li><a href="">联系我们</a></li>
+        <li><a href="">沃淘概况</a><span></span></li>
+        <li><a href="">产品与服</a><span></span></li>
+        <li><a href="">业绩成果</a><span></span></li>
+        <li><a href="">公司资源</a><span></span></li>
+        <li><a href="">产品优势</a><span></span></li>
+        <li><a href="">样板客户</a><span></span></li>
+        <li><a href="">联系我们</a><span></span></li>
       </ul>
       <div class="bar-nav-right"></div>
     </div>
@@ -46,7 +46,7 @@ export default {
     .bar-top
       height 40px
       color #fff
-      border-bottom 1px solid rgba(255, 255, 255, .15)
+      border-bottom 1px solid $color-bar-line-color
       .bar-top-left
         float left
         margin-top 12px
@@ -61,22 +61,26 @@ export default {
           margin-left 10px
     .bar-nav
       height 60px
-      border-bottom 1px solid rgba(255, 255, 255, .15)
+      border-bottom 1px solid $color-bar-line-color
       .bar-nav-left
         height 100%
         float left
         margin-left 10px
         li
+          position relative
           float left
           padding 0 16px
-          &:after
+          span
             position absolute
-            content '.'
             left 0
             bottom 0
-            width 100%
+            width 0%
             height 2px
-            background-color #000
+            background-color $color-common-theme-color
+            // transition width 150ms linear
+          &:hover > span
+            transition width 150ms linear 
+            width 100%
           a
             font-size $font-size-medium
             display inline-block
@@ -84,7 +88,7 @@ export default {
             line-height 60px
             color #fff
             &:hover
-              color $color-footer-hover-color
+              color $color-common-theme-color
            
 </style>
 

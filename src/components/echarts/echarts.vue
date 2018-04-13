@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper">
   <div class="echart" ref="echarts1" ></div>
-  <!-- <div class="echart" ref="echarts2" ></div> -->
+  <div class="echart" ref="echarts2" ></div>
   <div class="echart" ref="echarts3" ></div>
 </div>
 </template>
@@ -195,12 +195,11 @@ export default {
   methods: {
     _initECharts() {
       this.echarts1 = echarts.init(this.$refs.echarts1)
-      // this.echarts2 = echarts.init(this.$refs.echarts2)
+      this.echarts2 = echarts.init(this.$refs.echarts2)
       this.echarts3 = echarts.init(this.$refs.echarts3)
       this.echarts1.setOption(this.options1)
-      // this.echarts2.setOption(this.options2)
+      this.echarts2.setOption(this.options2)
       this.echarts3.setOption(this.options3)
-      Object.defineProperty
     }
   }
 }

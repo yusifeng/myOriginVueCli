@@ -11,8 +11,11 @@
     <!-- 版权相关 -->
     <common-footer></common-footer>
 
-    <!-- to-top -->
-    <to-top></to-top>
+    <!-- 跳至顶部 -->
+    <to-top class="to-top"></to-top>
+
+    <!-- 提供建议 -->
+    <provide-advice class="provide-advice"></provide-advice>
   </div>
 </template>
 
@@ -22,11 +25,11 @@
   import CommonFooter from 'components/common-footer/common-footer'
   import Echarts from 'components/echarts/echarts'
   import CommonBar from 'components/common-bar/common-bar'
+  import ProvideAdvice from 'components/provide-advice/provide-advice'
   export default {
     data() {
       return {
-        isShow: true,
-        msg: 'david'
+        
       }
     },
 
@@ -43,7 +46,8 @@
       CommonFooter,
       ToTop,
       Echarts,
-      CommonBar
+      CommonBar,
+      ProvideAdvice
     }
   }
 </script>
@@ -54,6 +58,10 @@
       position fixed
       right 10px
       bottom 10px
-      background-color #000
+    .provide-advice
+      position fixed
+      right 500px
+      bottom 300px
+      z-index 100
 </style>
 

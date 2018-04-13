@@ -5646,6 +5646,10 @@ vue-awesome-swiper@^3.1.3:
     object-assign "^4.1.1"
     swiper "^4.0.7"
 
+vue-awesome@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/vue-awesome/download/vue-awesome-3.0.0.tgz#0b0b37488dd4b7e4b9a269d0e9173cd5ab65ff0f"
+
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/vue-hot-reload-api/download/vue-hot-reload-api-2.3.0.tgz#97976142405d13d8efae154749e88c4e358cf926"

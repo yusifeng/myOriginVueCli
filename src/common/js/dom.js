@@ -7,6 +7,15 @@ export function addClass(el, className) {
 	el.className = newClass.join(' ')
 }
 
+export function removeClass(el, className) {
+	if (!haveClass(el, className)) {
+		return
+	}
+	let newClass = el.className.split(' ').filter((item) => item !== className)
+	// newClass
+	el.className = newClass.join(' ')
+}
+
 export function haveClass(el, className) {
 	let reg = new RegExp('(^|\\s)' + className + '(\\s|$)')
 	return reg.test(el.className)

@@ -26,3 +26,13 @@ export function debounce(func, delay) {
 		}, delay)
 	}
 }
+
+export function isPhoneNum(num) {
+	let reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/
+	return reg.test(num)
+}
+
+export function isNum(num) {
+	let reg = /^\d+$/
+	return reg.test(num)
+}

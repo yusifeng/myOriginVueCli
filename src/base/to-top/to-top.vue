@@ -1,5 +1,5 @@
 <template>
-    <div class='page-component-up' v-show='isShow' @click='goToTop'>
+    <div class='page-component-up shadow' v-show='isShow' @click='goToTop'>
       返回顶部
     </div>
 </template>
@@ -47,7 +47,6 @@ export default {
     height 40px
     background-color #fff
     transition background-color .3s
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,.15)
     &:hover
       background-color red
 </style>
