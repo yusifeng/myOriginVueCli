@@ -1,7 +1,9 @@
 <template>
   <div class="bar">
     <div class="bar-top">
-      <div class="bar-top-left">沃淘信科</div>
+      <a href="" class="bar-top-left">
+        <img  src="./logo-bar.gif" width="80">
+      </a>
       <div class="bar-top-right">
         <a href="https://www.baidu.com" target="_blank">控制台</a>
         <a href="">文档</a>
@@ -49,7 +51,7 @@ export default {
       border-bottom 1px solid $color-bar-line-color
       .bar-top-left
         float left
-        margin-top 12px
+        margin-top 7px
         margin-left 20px
       .bar-top-right
         float right
@@ -76,7 +78,7 @@ export default {
             bottom 0
             width 0%
             height 2px
-            background-color $color-common-theme-color
+            background-color $color-common-theme-hover-color
             // transition width 150ms linear
           &:hover > span
             transition width 150ms linear 
@@ -88,7 +90,7 @@ export default {
             line-height 60px
             color #fff
             &:hover
-              color $color-common-theme-color
+              color $color-common-theme-hover-color
            
 </style>
 

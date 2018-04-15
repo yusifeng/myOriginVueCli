@@ -86,29 +86,26 @@ export default {
       padding-top 30px
       padding-bottom 20px
       width 100%
-      .container
-        width 1130px
-        margin 0 auto
-        .inner
-          width 100%
-          font-size 0
-          .footer-website-item
-            float left
-            width 20%
-            box-sizing border-box
-            h3
-              font-size $font-size-medium
-            ul
-              margin-top 15px
-              margin-bottom 15px
-              li
-                font-size $font-size-small
-                line-height 1.8
-                a
-                  color $color-footer-dd-color
-                  &:hover
-                    // color $color-footer-theme-color
-                    color $color-common-theme-color
+      .inner
+        width 100%
+        font-size 0
+        .footer-website-item
+          float left
+          width 20%
+          box-sizing border-box
+          h3
+            font-size $font-size-medium
+          ul
+            margin-top 15px
+            margin-bottom 15px
+            li
+              font-size $font-size-small
+              line-height 1.8
+              a
+                color $color-footer-dd-color
+                &:hover
+                  // color $color-footer-theme-color
+                  color $color-common-theme-hover-color
     // .special
     //   border-right 1px solid $color-footer-line-color
     .footer-copyright

@@ -1,6 +1,6 @@
 <template>
   <!-- <input type="button" class="customer-btn" :width="width" :height="height" :value="value"> -->
-  <input type="button" class="customer-btn" :style="style" :value="value" @click="clickBtn">
+  <input type="button" class="customer-btn" :style="style" :value="value" @click="click">
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
     }
   },
   methods: {
-    clickBtn() {
+    click() {
       this.$emit('click')
     }
   }

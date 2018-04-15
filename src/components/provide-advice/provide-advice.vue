@@ -11,9 +11,8 @@
       <img src="https://img.alicdn.com/tfs/TB1ebBInxrI8KJjy0FpXXb5hVXa-56-38.png" class="advice-item-img" width="20" height="20">
     </div>
     <!-- item-special-phone -->
-    <div class="detail-phone shadow active" ref="detailPhone">
+    <div class="detail-phone shadow" ref="detailPhone" @mouseover="showDetail">
       <input type="text" class="detail-phone-tel" v-model="phoneNum" @keyup="phoneNum=phoneNum.replace(/[^\d]/g,'')" maxlength="11">
-      <!-- <input type="button" value="免费咨询" @click="counseling" class="detail-phone-btn"> -->
       <wt-button value="免费咨询" @click="counseling(2)"></wt-button>
       <p class="detail-phone-desc">输入号码后点击免费通话, 稍后您将接到我们的电话, 该通话对您完全免费, 请放心接听！</p>
     </div>
@@ -42,11 +41,11 @@ export default {
     },
 
     closeDetail() {
-    //   clearTimeout(this.timer)
-    //   this.timer = setTimeout(() => {
-    //     removeClass(this.$refs.detailPhone, 'active')
-    //     console.log(this.timer)
-    //   }, 30);
+      // clearTimeout(this.timer)
+      // this.timer = setTimeout(() => {
+        removeClass(this.$refs.detailPhone, 'active')
+        // console.log(this.timer)
+      // }, 30);
     },
 
     counseling(val) {  //咨询
@@ -66,12 +65,11 @@ export default {
   @import '~common/stylus/variable'
   
   .advice
+    display inline-block
     position relative
     width 44px
     height 129px
     background-color $color-provide-advice-background
-    
-    // background-color #000
     .advice-item
       position relative
       width 100%
@@ -95,7 +93,7 @@ export default {
       padding 20px
       // background-color $color-provide-advice-background
       background-color #fff
-      visibility hidden
+      display none
       box-sizing border-box
       .detail-phone-tel
         width 100%
@@ -112,7 +110,8 @@ export default {
         font-size $font-size-small
         line-height 1.8
     .active
-      visibility visible
-
+      // visibility visible
+      display none
+      display block
 </style>
 

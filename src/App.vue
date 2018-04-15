@@ -6,7 +6,10 @@
     <slide></slide>
 
     <!-- 图标 -->
-    <echarts></echarts>
+    <!-- <echarts></echarts> -->
+
+    <!-- 主题词 -->
+    <slogen2></slogen2>
     
     <!-- 版权相关 -->
     <common-footer></common-footer>
@@ -20,12 +23,15 @@
 </template>
 
 <script>
+
   import Slide from 'base/slide/slide'
   import ToTop from 'base/to-top/to-top'
   import CommonFooter from 'components/common-footer/common-footer'
   import Echarts from 'components/echarts/echarts'
   import CommonBar from 'components/common-bar/common-bar'
   import ProvideAdvice from 'components/provide-advice/provide-advice'
+  import Slogen from 'components/slogen/slogen'
+  import Slogen2 from 'components/slogen2/slogen2'
   export default {
     data() {
       return {
@@ -47,7 +53,9 @@
       ToTop,
       Echarts,
       CommonBar,
-      ProvideAdvice
+      ProvideAdvice,
+      Slogen,
+      Slogen2
     }
   }
 </script>
@@ -60,7 +68,7 @@
       bottom 10px
     .provide-advice
       position fixed
-      right 500px
+      right 10px
       bottom 300px
       z-index 100
 </style>
